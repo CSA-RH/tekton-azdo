@@ -33,7 +33,7 @@ https://dev.azure.com/MY_AZURE_DEVOPS_ORGANIZATION/MY_AZURE_DEVOPS_PROJECT/_git/
 https://dev.azure.com/MY_AZURE_DEVOPS_ORGANIZATION/MY_AZURE_DEVOPS_PROJECT/_git/MY_AZURE_DEVOPS_REPOSITORY_2|my-event-listener-for-pipeline-1:8000|main;qa
 https://dev.azure.com/MY_AZURE_DEVOPS_ORGANIZATION/MY_AZURE_DEVOPS_PROJECT/_git/MY_AZURE_DEVOPS_REPOSITORY_3|my-event-listener-for-pipeline-2:8000|main
 EOF
-oc create configmap git-input --from-file=$REPOS_CM_FILE
+oc create configmap input-git --from-file=$REPOS_CM_FILE
 ```
 
 Create the CronJob for polling (executed every minute) 
