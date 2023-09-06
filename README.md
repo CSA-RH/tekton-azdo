@@ -141,7 +141,7 @@ spec:
                             done <<< $item                          
                             ;;
                           *)
-                            echo "ERROR:  Error detected processing line $position"
+                            echo "ERROR:  Error detected processing line $i"
                             ;;
                         esac
                         ((position=position+1))
