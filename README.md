@@ -36,10 +36,9 @@ EOF
 oc create configmap input-git --from-file=$REPOS_CM_FILE
 ```
 
-Create the CronJob for polling (executed every minute) 
+Create the CronJob for polling (executed every minute). File **azdo-polling-cronjob.yaml** 
 
-```console
-cat <<EOF | oc create -f -
+```yaml
 kind: CronJob
 apiVersion: batch/v1
 metadata:
